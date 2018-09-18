@@ -1,0 +1,14 @@
+
+//- app-maincontainer
+app-header
+.member(*ngIf="testitem") 
+    h4 {{testitem?.name}}
+    input(type="text" ) 
+    button( [disabled]="testitem?.status===1" ) Start Test 
+
+.guest(*ngIf="!testitem") 
+    label(for="create") Name
+    input#create(type="text" placeholder="name of workspace")
+    label(for="url") URL
+    input#create(type="text" placeholder="http://")
+    button([disabled]="testitem?.status===1" ) Create Test WorkSpace

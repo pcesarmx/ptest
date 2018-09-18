@@ -1,0 +1,10 @@
+<!-- <h1> WELCOME PAGE HERE! </h1> -->
+<br><br><br><br><br>
+<div [hidden]="!loginService?._loggedInUser" >HELLO {{ loginService?._loggedInUser?.name }} </div>
+
+<div class="row" [hidden]="!showWarning">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <alert type="danger text-center" dismissible="true">Please Login</alert>
+    </div>
+</div>

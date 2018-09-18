@@ -1,0 +1,29 @@
+<nav class="docs-navbar-header">
+    <!-- <a class="docs-button mat-button">Material</a> -->
+    <ul>
+        <li>
+            <a class="docs-button mat-button"  *ngFor="let item of menuItems" [routerLink]="item.link"> {{item.label}} </a>
+        </li> 
+    </ul>
+    <select>
+        <option value="google">GOOGLE</option>
+        <option value="github">GITHUB</option>
+    </select>
+    <div class="btn-group pull-right">
+        <button class="btn btn-primary" [routerLink]="['login']" [disabled]="loginService._loggedInUser" (click)="loginAction()" btnCheckbox>LOGIN</button>
+        <button class="btn btn-primary" [routerLink]="['landing']" [disabled]="!loginService._loggedInUser" (click)="logoutAction()" btnCheckbox>LOGOUT</button>
+    </div>
+    <!-- 
+    <button class="btn btn-primary pull-right" [routerLink]="['login']" [disabled]="loginService._loggedInUser" (click)="loginAction()" > LOGIN </button>
+    <button class="docs-button mat-button" [routerLink]="['landing']" [disabled]="!loginService._loggedInUser" (click)="logoutAction()"  > LOGOUT </button>
+    -->
+    <code>{{ ((loginService||{})._loggedInUser||{}).name |json}}</code>
+</nav>
+<div [ngClass]="test()" ></div>
+
+<!-- TODO: FB MENU -->
+<!-- <pre>
+    <ul>
+        <li class="red" *ngFor="let item of items | async">{{ item | json }}</li>
+    </ul>
+</pre> -->

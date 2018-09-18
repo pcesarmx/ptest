@@ -1,0 +1,26 @@
+.docs-navbar-header {
+    display: flow-root;
+    display: -ms-flexbox;
+    display: block;
+    /* -ms-flex-wrap: wrap; */
+    /* flex-wrap: wrap; */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 8px 16px;
+    height: 48px;
+}
+
+.docs-navbar-header {
+    background: #3d404c;
+}
+
+.docs-button[md-button], .docs-button[md-raised-button] {
+    text-transform: uppercase;
+}
+
+.mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
+    font-family: Roboto,Helvetica Neue,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}

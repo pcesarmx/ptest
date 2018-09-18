@@ -1,0 +1,82 @@
+  <h2 style="text-align: center;">
+    Please Login
+  </h2>
+  <div style="text-align: center;">
+
+      <form #myForm="ngForm" (ngSubmit)="onSubmit( myForm )" novalidate>
+          <input  type="email" placeholder="Email" NgModel  /> <br >
+          <input type="password" placeholder="Password" />
+          <input type="submit" value="Enter"/>
+      </form>
+  </div>
+  <pre></pre>
+<!-- 
+<form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input">
+          Check me out
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+ -->
+  
+
+  <!-- Class of Oct- NG FORMS STEPS
+    1) import FormsModule from "@angular/forms"; in app.module (No jala)?? app.routing.module (Si jala) y agregarlo a import[] de @NgModule
+    2) En la forma que se quiere implementar: import NgForm from '@angular/forms', ;
+    3) En el html agregar a la forma <form #myForm="ngForm" ... en cada atributo input: ngModel
+  -->
+
+
+  <!-- Class of Oct-17-2017  View Child
+    1) import ViewChild from @angular/core , NgForm from @angular/form
+    2) on the module:  @ViewChild("nameOfTheForm")
+    3) delare private attribute ex: _myForm:NgForm
+  -->
+
+  <!-- crear un room-form-component e inyectarlo en Rooms
+  gw-room-form
+
+  @input declarador para hacerle binding a un atributo desde
+
+  interface IRoom {
+    id: string,
+    name: string,
+    picture: string,
+    reservations? : IReservation[]
+}
+
+interface IReservation {
+    id?: string,
+    email: string,
+    reason: string,
+    startDateTime: Date,
+    endDateTime: Date
+}
+
+1) design reservation interface
+2) design room interface
+3) design a form to collect reservation info 
+4) style it!
+ bonus: collects errors and show them in a summary
+5) feature section
+
+
+Extra:
+  Create a reservation list component
+  This will look at resevations on your room
+  ngSubmit
+
+
+  -->
