@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { LoginService } from '../services/login.service';
-import { ClientNode } from '../client-node';
+import { ClientNode } from '../interfaces/client-node';
 // import { NgForm  } from '@angular/forms';
 
 @Component({

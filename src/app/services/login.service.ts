@@ -2,7 +2,7 @@ import { Injectable  } from '@angular/core';
 import { Observable } from 'rxjs'; // Import map, y otras funciones
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase';
-import { ClientNode } from '../client-node';
+import { ClientNode } from '../interfaces/client-node';
 
 @Injectable()
 export class LoginService {
@@ -12,7 +12,7 @@ export class LoginService {
 
     public getLoggedInUser(): Observable<ClientNode> {
         return this._loggedInUser;
-    }
+    } 
 
     public login() {
         // hacer http req
